@@ -3,8 +3,10 @@
       "esri/views/SceneView",
       "esri/Camera",
       "esri/widgets/Home",
+      "esri/widgets/Legend",
+      "esri/widgets/LayerList",
       "dojo/domReady!"
-    ], function(WebScene, SceneView, Camera, Home) {
+    ], function(WebScene, SceneView, Camera, Legend, LayerList, Home) {
 
     
       /*var map = new Map({
@@ -52,7 +54,7 @@
     
     [bei, los, stl, mex].forEach(function(button) {
       button.style.display = '.esri-button';
-      view.ui.add(button, 'bottom-right');
+      view.ui.add(button, 'top-right');
     });
     
     bei.addEventListener('click', function() {
@@ -101,6 +103,25 @@
         target:camera
       });
     });
+view.when(function() {
+	
+          // get the first layer in the collection of operational layers in the WebMap
+          // when the resources in the MapView have loaded.
+        var featureLayer = scene.layers.getItemAt(1);
 
+        var legend = new Legend({
+          view: view,
+          layerInfos: [{
+            layer: featureLayer,
+            title: "Major project buildings"
+          }]
+        });
+      
+   view.ui.add(legend, "bottom-right");
+   });
+      var layerList = new LayerList({
+  view: view
+});
+      view.ui.add(layerList, "bottom-right");
 
     });
