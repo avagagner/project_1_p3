@@ -1,14 +1,33 @@
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-   crossorigin=""/>
+ <link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.8/"></script>
 
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-   crossorigin=""></script>
+<!-- In the head -->
+<link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.2.5/css/calcite-web.min.css">
+
+<link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/dark-red/main.css">
+<!--light (default)
+dark
+light-blue
+dark-blue
+light-green
+dark-green
+light-purple
+dark-purple
+light-red
+dark-red -->
+<div class="panel panel-light-blue">
+ <h1 class="trailer-half">New Proposed Development</h1>
+ <h2 class="trailer-0">Portland, Oregon</h2>
+</div>
+
+    <button id="los" class="btn btn-blue">View 1</button>
+  <button id="bei" class="btn btn-blue">View 2</button>
+  <button id="stl"  class="btn btn-blue">View 3</button>
+  <button id="mex"  class="btn btn-blue">Aerial</button>
 
  <link rel="stylesheet" href="style.css"> 
 
 <body>
-<div id="mapid"></div>
+<div id="viewDiv"></div>
   <script src="script.js"></script>
 </body>
